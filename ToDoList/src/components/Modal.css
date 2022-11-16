@@ -1,0 +1,24 @@
+.modal_background {
+  background-color: aliceblue;
+  border: 1px solid black;
+  width: 400px;
+  height: 200px;
+  position: fixed;
+  top: 30%;
+  left: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.date {
+  border: none;
+  background-color: aliceblue;
+  color: black;
+}
+.button {
+  border: none;
+  border-radius: 50%;
+  background-color: rgb(151, 206, 206);
+}
