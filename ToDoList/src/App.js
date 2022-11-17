@@ -3,8 +3,8 @@ import "./App.css";
 import { useState } from "react";
 
 const DUMMY_LIST = [
-  { id: "a", note: "do somthing", date: new Date() },
-  { id: "b", note: "do somthing else", date: new Date() },
+  { id: "a", title: "first", note: "do something", date: new Date() },
+  { id: "b", title: "seconed", note: "do something else", date: new Date() },
 ];
 
 function App() {

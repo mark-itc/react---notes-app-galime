@@ -6,9 +6,9 @@ function Modal(props) {
         <button className="button" onClick={() => props.closeModal(false)}>
           X
         </button>
-        <div className="title">{props.title}</div>
-        <div className="note">{props.note}</div>
-        <div className="date">{props.date}</div>
+        <div className="date_modal">{props.date}</div>
+        <div className="title_modal">{props.title}</div>
+        <div className="note_modal">{props.note}</div>
       </div>
     </div>
   );

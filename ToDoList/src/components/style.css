@@ -1,21 +1,63 @@
-.container {
+.form_container {
+  position: fixed;
+  right: 20%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  padding: 20px;
-  border: 1px solid black;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.add_note_btn {
+  width: 87.5%;
+  height: 20px;
+  box-shadow: 5px 10px 8px #e4dfdf;
+  background-color: #fae572;
+  border: none;
 }
 
+.title_box {
+  width: 85%;
+  height: 20px;
+  box-shadow: 5px 10px 8px #e4dfdf;
+  background-color: #fae572;
+  border: none;
+}
+.note_box {
+  width: 85%;
+  height: 100px;
+  box-shadow: 5px 10px 8px #e4dfdf;
+  background-color: #fae572;
+  border: none;
+}
+.note_container {
+  margin: 10px;
+  width: 50%;
+  /* background-color: #e99999; */
+  display: grid;
+  grid-template-rows: 250px 5px;
+  grid-template-columns: 250px 5px;
+}
+.note_content_container {
+  box-shadow: 5px 10px 8px #e4dfdf;
+  background-color: #fae572;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.delete_note_btn {
+  width: 20px;
+  height: 20px;
+  align-self: flex-start;
+  background-color: #fae572;
+  border: none;
+}
 .date {
   display: flex;
   flex-direction: column;
   width: 5.5rem;
   height: 5.5rem;
-  border: 1px solid #ececec;
-  background-color: #2a2a2a;
-  color: white;
   border-radius: 12px;
   align-items: center;
   justify-content: center;

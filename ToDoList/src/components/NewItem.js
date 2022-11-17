@@ -16,6 +16,7 @@ function NewItem(props) {
       <NoteForm onSaveNote={SaveNoteHandler} />
       {props.items.map((toDoList) => (
         <NoteItem
+          title={toDoList.title}
           note={toDoList.note}
           date={toDoList.date}
           id={toDoList.id}

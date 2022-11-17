@@ -20,22 +20,28 @@ function NoteItem(props) {
   }
 
   return (
-    <div className="container" onClick={noteClickHandler}>
+    <div>
       {isClicked && (
         <Modal
-          title="Note title"
+          title={props.title}
           note={props.note}
           date={props.date.toLocaleString("en-US")}
           closeModal={setIsClicked}
         />
       )}
-      <button onClick={deletButtomHandler}>x</button>
-      <h2>Note title</h2>
-      <h3>{props.note}</h3>
-      <div className="date">
-        <div className="month">{month}</div>
-        <div className="year">{year}</div>
-        <div className="day">{day}</div>
+      <div className="note_container">
+        <div className="note_content_container" onClick={noteClickHandler}>
+          <button className="delete_note_btn" onClick={deletButtomHandler}>
+            x
+          </button>
+          <div className="date">
+            <div className="month">{month}</div>
+            <div className="year">{year}</div>
+            <div className="day">{day}</div>
+          </div>
+          <h2 contenteditable="true">{props.title}</h2>
+          <h3 contenteditable="true">{props.note}</h3>
+        </div>
       </div>
     </div>
   );

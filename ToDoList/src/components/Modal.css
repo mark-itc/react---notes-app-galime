@@ -1,8 +1,8 @@
 .modal_background {
-  background-color: aliceblue;
+  background-color: #fae572;
   border: 1px solid black;
-  width: 400px;
-  height: 200px;
+  width: 30%;
+  height: 30%;
   position: fixed;
   top: 30%;
   left: 30%;
@@ -12,13 +12,30 @@
   align-items: center;
 }
 
-.date {
+.date_modal {
+  position: relative;
   border: none;
-  background-color: aliceblue;
-  color: black;
+  background-color: #fae572;
+  margin: 10px;
+}
+.title_modal {
+  position: relative;
+  align-self: center;
+  border: none;
+  margin: 20px;
+}
+.note_modal {
+  position: relative;
+  align-self: center;
+  border: none;
+  margin: 20px;
 }
 .button {
   border: none;
+  position: relative;
+  top: -20%;
+  left: -40%;
+  align-self: flex-start;
   border-radius: 50%;
-  background-color: rgb(151, 206, 206);
+  background-color: #fae572;
 }

@@ -1,10 +1,15 @@
 import { useState } from "react";
+import "./style.css";
 
 function NoteForm(props) {
-  const [input, setInput] = useState("");
+  const [titleInput, setTitleInput] = useState("");
+  const [noteInput, setNoteInput] = useState("");
 
-  function changeHandler(event) {
-    setInput(event.target.value);
+  function changeTitleHandler(event) {
+    setTitleInput(event.target.value);
+  }
+  function changeNoteHandler(event) {
+    setNoteInput(event.target.value);
   }
 
   function submitHandler(event) {
@@ -12,23 +17,37 @@ function NoteForm(props) {
 
     const newNote = {
       id: Math.random().toString(),
-      note: input,
+      title: titleInput,
+      note: noteInput,
       date: new Date(),
     };
     props.onSaveNote(newNote);
-    setInput("");
+    setTitleInput("");
+    setNoteInput("");
   }
 
   return (
     <div>
-      <form onSubmit={submitHandler}>
+      <form className="form_container" onSubmit={submitHandler}>
         <input
+          className="title_box"
           id="userInput"
           type="text"
-          value={input}
-          onChange={changeHandler}
+          placeholder="Title"
+          value={titleInput}
+          onChange={changeTitleHandler}
         />
-        <button type="submit">Add Note</button>
+        <textarea
+          className="note_box"
+          placeholder="Note"
+          contenteditable="true"
+          value={noteInput}
+          onChange={changeNoteHandler}
+          required
+        />
+        <button className="add_note_btn" type="submit">
+          Add Note
+        </button>
       </form>
     </div>
   );
